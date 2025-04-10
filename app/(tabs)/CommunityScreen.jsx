@@ -1,55 +1,64 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView ,TouchableOpacity} from 'react-native';
 import NeoBrutalismCard from '../components/NeoBrutalismCard';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function CommunityScreen() {
   return (
-    <ScrollView style={styles.container}>
-      <NeoBrutalismCard style={styles.card}>
-        <Text style={styles.title}>Community Forum</Text>
-        <View style={styles.forumPost}>
-          <Text style={styles.postTitle}>Tips for New Drivers 🚗</Text>
-          <Text style={styles.postAuthor}>by Sarah M.</Text>
-          <Text style={styles.postStats}>💬 23 replies • ❤️ 45 likes</Text>
-        </View>
-        <View style={styles.forumPost}>
-          <Text style={styles.postTitle}>Best Areas for Weekend Work 📍</Text>
-          <Text style={styles.postAuthor}>by Mike R.</Text>
-          <Text style={styles.postStats}>💬 15 replies • ❤️ 32 likes</Text>
-        </View>
-      </NeoBrutalismCard>
-
-      <NeoBrutalismCard style={styles.card}>
-        <Text style={styles.title}>Local Meetups</Text>
-        <View style={styles.meetupItem}>
-          <Text style={styles.meetupTitle}>Coffee & Connect ☕️</Text>
-          <Text style={styles.meetupDetails}>Tomorrow, 9:00 AM</Text>
-          <Text style={styles.meetupLocation}>Central Park Cafe</Text>
-          <View style={styles.attendees}>
-            <Text style={styles.attendeesText}>12 Going</Text>
+    <SafeAreaView style={styles.background}>
+      <View style={{ padding: 30, justifyContent: "center", alignItems: "center", flexDirection: "row"}}>
+        <TouchableOpacity>
+          <Text>Blogs</Text>
+        </TouchableOpacity>
+      </View>
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+        <NeoBrutalismCard style={styles.card}>
+          <Text style={styles.title}>Community Forum</Text>
+          <View style={styles.forumPost}>
+            <Text style={styles.postTitle}>Tips for New Drivers 🚗</Text>
+            <Text style={styles.postAuthor}>by Sarah M.</Text>
+            <Text style={styles.postStats}>💬 23 replies • ❤️ 45 likes</Text>
           </View>
-        </View>
-      </NeoBrutalismCard>
+          <View style={styles.forumPost}>
+            <Text style={styles.postTitle}>Best Areas for Weekend Work 📍</Text>
+            <Text style={styles.postAuthor}>by Mike R.</Text>
+            <Text style={styles.postStats}>💬 15 replies • ❤️ 32 likes</Text>
+          </View>
+        </NeoBrutalismCard>
 
-      <NeoBrutalismCard style={styles.card}>
-        <Text style={styles.title}>Success Stories</Text>
-        <View style={styles.storyItem}>
-          <Text style={styles.storyTitle}>"Made $1000 in my first week!"</Text>
-          <Text style={styles.storyContent}>
-            "I followed the tips from the community and managed to maximize my earnings. Thank you everyone!"
-          </Text>
-          <Text style={styles.storyAuthor}>- John D.</Text>
-        </View>
-      </NeoBrutalismCard>
-    </ScrollView>
+        <NeoBrutalismCard style={styles.card}>
+          <Text style={styles.title}>Local Meetups</Text>
+          <View style={styles.meetupItem}>
+            <Text style={styles.meetupTitle}>Coffee & Connect ☕️</Text>
+            <Text style={styles.meetupDetails}>Tomorrow, 9:00 AM</Text>
+            <Text style={styles.meetupLocation}>Central Park Cafe</Text>
+            <View style={styles.attendees}>
+              <Text style={styles.attendeesText}>12 Going</Text>
+            </View>
+          </View>
+        </NeoBrutalismCard>
+
+        <NeoBrutalismCard style={styles.card}>
+          <Text style={styles.title}>Success Stories</Text>
+          <View style={styles.storyItem}>
+            <Text style={styles.storyTitle}>"Made $1000 in my first week!"</Text>
+            <Text style={styles.storyContent}>
+              "I followed the tips from the community and managed to maximize my earnings. Thank you everyone!"
+            </Text>
+            <Text style={styles.storyAuthor}>- John D.</Text>
+          </View>
+        </NeoBrutalismCard>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'black',
-    padding: 16,
+  
+  background: {
+    backgroundColor: 'rgba(58, 131, 244, 0.4)',
+    opacity:0.9,
+    flex:1,
   },
   card: {
     marginBottom: 16,
@@ -137,4 +146,7 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     textAlign: 'right',
   },
+  container:{
+    padding:16
+  }
 });

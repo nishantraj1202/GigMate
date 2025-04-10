@@ -1,58 +1,99 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import NeoBrutalismCard from '../components/NeoBrutalismCard';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Linking } from 'react-native';
+
+
 
 export default function HealthScreen() {
   return (
-    <ScrollView style={styles.container}>
-      <NeoBrutalismCard style={styles.card}>
-        <Text style={styles.title}>Wellness Check</Text>
-        <View style={styles.wellnessItem}>
-          <Text style={styles.itemTitle}>Hours Worked Today</Text>
-          <Text style={styles.itemValue}>6.5 / 8</Text>
-          <View style={styles.progressBar}>
-            <View style={[styles.progress, { width: '81.25%' }]} />
-          </View>
-        </View>
-      </NeoBrutalismCard>
+    <SafeAreaView style={styles.container}>
 
-      <NeoBrutalismCard style={styles.card}>
-        <Text style={styles.title}>Rest Breaks</Text>
-        <View style={styles.breaksList}>
-          <View style={styles.breakItem}>
-            <Text style={styles.breakTime}>10:30 AM</Text>
-            <Text style={styles.breakDuration}>15 min</Text>
-            <Text style={styles.breakStatus}>✅ Completed</Text>
-          </View>
-          <View style={styles.breakItem}>
-            <Text style={styles.breakTime}>1:00 PM</Text>
-            <Text style={styles.breakDuration}>30 min</Text>
-            <Text style={styles.breakStatus}>⏰ Due</Text>
-          </View>
-        </View>
-      </NeoBrutalismCard>
+      <Image
+        source={{ uri: "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjg2OC1zYXNpLTA2LmpwZw.jpg" }}
+        resizeMode="cover"
+        style={styles.backgroundImage}
 
-      <NeoBrutalismCard style={styles.card}>
-        <Text style={styles.title}>Resources</Text>
-        <View style={styles.resourcesList}>
-          <View style={styles.resourceItem}>
-            <Text style={styles.resourceTitle}>Mental Health Support</Text>
-            <Text style={styles.resourceDesc}>24/7 counseling services</Text>
+      />
+
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <NeoBrutalismCard style={styles.card}>
+          <Text style={styles.title}>Wellness Check</Text>
+          <View style={styles.wellnessItem}>
+            <Text style={styles.itemTitle}>Hours Worked Today</Text>
+            <Text style={styles.itemValue}>6.5 / 8</Text>
+            <View style={styles.progressBar}>
+              <View style={[styles.progress, { width: '81.25%' }]} />
+            </View>
           </View>
-          <View style={styles.resourceItem}>
-            <Text style={styles.resourceTitle}>Physical Wellness</Text>
-            <Text style={styles.resourceDesc}>Ergonomic tips & exercises</Text>
+        </NeoBrutalismCard>
+
+        <NeoBrutalismCard style={styles.card}>
+          <Text style={styles.title}>Rest Breaks</Text>
+          <View style={styles.breaksList}>
+            <View style={styles.breakItem}>
+              <Text style={styles.breakTime}>10:30 AM</Text>
+              <Text style={styles.breakDuration}>15 min</Text>
+              <Text style={styles.breakStatus}>✅ Completed</Text>
+            </View>
+            <View style={styles.breakItem}>
+              <Text style={styles.breakTime}>1:00 PM</Text>
+              <Text style={styles.breakDuration}>30 min</Text>
+              <Text style={styles.breakStatus}>⏰ Due</Text>
+            </View>
+          </View>
+        </NeoBrutalismCard>
+       
+
+        <NeoBrutalismCard style={styles.card}>
+          <Text style={styles.title}>Helpful Resources</Text>
+
+          <Text style={styles.linkTitle}>📄 Article:Recent news at giggy world</Text>
+          <Text
+            style={styles.link}
+            onPress={() => Linking.openURL('https://www.mindful.org/mindfulness-at-work/')}
+          >
+            Read article
+          </Text>
+
+          <Text style={[styles.linkTitle, { marginTop: 16 }]}>🎥 YouTube:How to increase rating</Text>
+          <Text
+            style={styles.link}
+            onPress={() => Linking.openURL('https://www.youtube.com/watch?v=8BcPHWGQO44')}
+          >
+            Watch on YouTube
+          </Text>
+        </NeoBrutalismCard>
+
+
+        <View style={styles.health}>
+          <Image
+            source={{ uri: 'https://www.shutterstock.com/image-vector/male-doctor-smiling-happy-face-600nw-2481032615.jpg' }}
+            resizeMode="cover"
+            style={{ width: 70 }}
+          />
+          <Text style={styles.title}>Resources</Text>
+          <View style={styles.resourcesList}>
+            <View style={styles.resourceItem}>
+              <Text style={styles.resourceTitle}>Mental Health Support</Text>
+              <Text style={styles.resourceDesc}>24/7 counseling services</Text>
+            </View>
+            <View style={styles.resourceItem}>
+              <Text style={styles.resourceTitle}>Physical Wellness</Text>
+              <Text style={styles.resourceDesc}>Ergonomic tips & exercises</Text>
+            </View>
           </View>
         </View>
-      </NeoBrutalismCard>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'rgba(58, 131, 244, 0.4)',
     padding: 16,
   },
   card: {
@@ -128,4 +169,27 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#666',
   },
+  health: {
+    backgroundColor: 'green',
+    height: 300,
+    borderRadius: 12,
+    padding: 20,
+
+  },
+  backgroundImage: {
+    ...StyleSheet.absoluteFillObject, // Covers the whole screen
+    opacity: 0.2, // Low opacity for background
+    zIndex: -1
+  },
+  linkTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 4,
+  },
+  link: {
+    fontSize: 14,
+    color: 'blue',
+    textDecorationLine: 'underline',
+  },
+  
 });

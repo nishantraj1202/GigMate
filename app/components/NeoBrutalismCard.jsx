@@ -11,11 +11,11 @@ export default function NeoBrutalismCard({ children, style }) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: 'white', // slightly transparent white
     borderRadius: 12,
     borderWidth: 3,
-    borderColor: '#000000',
-    shadowColor: '#000000',
+    borderColor: 'white',
+    shadowColor: 'black',
     shadowOffset: {
       width: 6,
       height: 6,
@@ -25,3 +25,5 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
 });
+
+    

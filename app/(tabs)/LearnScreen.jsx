@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 export default function LearnScreen() {
   return (
     <LinearGradient
-    colors={['#2193b0','#ff0040']}
+    colors={['#2193b0','orange']}
     start={{x:0,y:0}}
     end={{x:1,y:1}}
     style={styles.container}
@@ -15,7 +15,7 @@ export default function LearnScreen() {
     >
 
   
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container}showsVerticalScrollIndicator={false}>
       <NeoBrutalismCard style={styles.card}>
         <Text style={styles.title}>Learning Paths</Text>
         <View style={styles.pathItem}>
@@ -67,6 +67,7 @@ export default function LearnScreen() {
 
 const styles = StyleSheet.create({
   container: {
+    
     flex: 1,
     padding: 16,
   },

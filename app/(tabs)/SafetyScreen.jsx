@@ -8,12 +8,10 @@ export default function SafetyScreen() {
   return (
     <LinearGradient
     
-      colors={['#808080', '#9f6060', '#004d39']}
-      start={{ x: 0, y: 0 }}
-      end={{ x: 1, y: 1}}
+      colors={['#808080', '#9f6060']}
       style={styles.container}
     >
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <NeoBrutalismCard style={[styles.card, styles.emergencyCard]}>
         <TouchableOpacity style={styles.emergencyButton}>
           <Text style={styles.emergencyButtonText}>🚨 EMERGENCY SOS</Text>
@@ -72,7 +70,6 @@ export default function SafetyScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-   
     padding: 16,
   },
   card: {
