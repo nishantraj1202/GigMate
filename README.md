@@ -1,10 +1,10 @@
 # 🚀 GigMate
-<img width="276" height="543" alt="Screenshot 2025-07-16 112032" src="https://github.com/user-attachments/assets/56c6f421-b63e-4d2f-862b-2069b32ad3c6" />
-<img width="281" height="549" alt="Screenshot 2025-07-16 112054" src="https://github.com/user-attachments/assets/67a0e2c1-90e4-4295-981e-1ade00bc9c84" />
-<img width="265" height="523" alt="Screenshot 2025-07-16 112113" src="https://github.com/user-attachments/assets/de55ca67-5be4-458b-861a-ac6fb23e6f19" />
-<img width="288" height="539" alt="Screenshot 2025-07-16 112127" src="https://github.com/user-attachments/assets/53611eba-72f8-4077-90bc-3dbf87ebf72f" />
-<img width="283" height="533" alt="Screenshot 2025-07-16 112136" src="https://github.com/user-attachments/assets/d2557f56-77c2-4d9a-ba12-385c8fb9534d" />
-<img width="280" height="532" alt="Screenshot 2025-07-16 112149" src="https://github.com/user-attachments/assets/1955f959-0fe3-4211-b57d-e8d46c2546f5" />
+<img width="280" height="540" alt="Screenshot 2025-07-16 112032" src="https://github.com/user-attachments/assets/56c6f421-b63e-4d2f-862b-2069b32ad3c6" />
+<img width="280" height="540" alt="Screenshot 2025-07-16 112054" src="https://github.com/user-attachments/assets/67a0e2c1-90e4-4295-981e-1ade00bc9c84" />
+<img width="280" height="540" alt="Screenshot 2025-07-16 112113" src="https://github.com/user-attachments/assets/de55ca67-5be4-458b-861a-ac6fb23e6f19" />
+<img width="280" height="540" alt="Screenshot 2025-07-16 112127" src="https://github.com/user-attachments/assets/53611eba-72f8-4077-90bc-3dbf87ebf72f" />
+<img width="280" height="540" alt="Screenshot 2025-07-16 112136" src="https://github.com/user-attachments/assets/d2557f56-77c2-4d9a-ba12-385c8fb9534d" />
+<img width="280" height="540" alt="Screenshot 2025-07-16 112149" src="https://github.com/user-attachments/assets/1955f959-0fe3-4211-b57d-e8d46c2546f5" />
 
 
 **GigMate** is a one-stop platform designed for gig workers and blue-collar employees to connect with verified work opportunities, raise concerns, and access essential resources — all in a secure, simple, and inclusive way.
