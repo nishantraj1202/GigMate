@@ -62,9 +62,11 @@ GigMate is built with a focus on **solving real-world problems using technology*
 - Sohit       (Backend Developer)
 - Mohit        (UI Developer)
 
----
-
 ## 📸 Screenshots
+<img width="276" height="543" alt="Screenshot 2025-07-16 112032" src="https://github.com/user-attachments/assets/56c6f421-b63e-4d2f-862b-2069b32ad3c6" />
+
+
+
 
 
 
